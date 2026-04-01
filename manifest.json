@@ -1,0 +1,25 @@
+{
+  "name": "日式手繪御神籤",
+  "slug": "omikuji-draw",
+  "version": "1.0.0",
+  "description": "最具和風質感的線上御神籤！在畫布隨手畫出你的意念，隨機抽出專屬籤詩與日系插畫，指引每日運勢。",
+  "author": "",
+  "category": "other",
+  "tags": ["omikuji", "fortune", "japanese", "draw"],
+  "ads": {
+    "enabled": true,
+    "slots": ["header", "sidebar", "footer"]
+  },
+  "cdn": {
+    "entrypoint": "index.html",
+    "assets": [
+      "style.css",
+      "main.js",
+      "ads/ad-loader.js",
+      "assets/og-image.png",
+      "assets/result-daikichi.png"
+    ]
+  },
+  "publishedAt": "2026-04-01",
+  "createdAt": "2026-03-31"
+}

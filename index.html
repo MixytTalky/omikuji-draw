@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5SL4XJ6V');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日式手繪御神籤 - 畫出你的每日運勢 | Tool-Maker</title>
+  <meta name="description" content="最具和風質感的線上御神籤！在畫布隨手畫出你的意念，隨機抽出大吉到大凶的專屬籤詩與日系插畫，為你指引每日運勢。免安裝，支援手機。" />
+  <meta property="og:title" content="日式手繪御神籤 - 畫出你的每日運勢" />
+  <meta property="og:description" content="最具和風質感的線上御神籤！在畫布隨手畫出你的意念，隨機抽出大吉到大凶的專屬籤詩與日系插畫，為你指引每日運勢。免安裝，支援手機。" />
+  <meta property="og:image" content="./assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SL4XJ6V"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="ad-slot ad-slot--header" data-ad-slot="header" aria-label="Advertisement"></div>
+  </header>
+
+  <div class="tool-layout">
+    <main class="tool-content">
+      <div id="screen-draw" class="screen active">
+        <div class="header-titles">
+          <svg class="shrine-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 8h16M4 14h16M6 8v12M18 8v12M12 4v4M12 14v6M10 4h4"/>
+          </svg>
+          <h1 class="main-title serif-text">日式手繪御神籤</h1>
+          <p class="subtitle serif-text">放空思緒，在下方畫出你的意念</p>
+        </div>
+        
+        <div class="canvas-container">
+          <canvas id="paintCanvas"></canvas>
+          <div class="canvas-overlay" id="canvas-overlay">請在此處繪製符號以注入意念</div>
+        </div>
+        
+        <div class="action-buttons">
+          <button id="btn-clear" class="btn btn-secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2M10 11v6M14 11v6"/>
+            </svg> 清除重畫
+          </button>
+          <button id="btn-draw-lot" class="btn btn-primary" disabled>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/>
+            </svg> 求取命籤
+          </button>
+        </div>
+      </div>
+
+      <div id="screen-result" class="screen">
+        <div class="result-card">
+          <div class="result-image-wrapper">
+            <img id="result-image" class="result-image" src="" alt="御神籤結果圖" />
+          </div>
+          <h2 id="result-rank" class="result-rank serif-text"></h2>
+          <p id="result-poem" class="result-poem serif-text"></p>
+        </div>
+        
+        <div class="action-buttons">
+          <button id="btn-retry" class="btn btn-secondary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+            </svg> 再抽一次
+          </button>
+          <button id="btn-share" class="btn btn-primary">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg> 分享運勢
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="tool-sidebar">
+      <div class="ad-slot ad-slot--sidebar" data-ad-slot="sidebar" aria-label="Advertisement"></div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="ad-slot ad-slot--footer" data-ad-slot="footer" aria-label="Advertisement"></div>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script src="./ads/ad-loader.js"></script>
+</body>
+</html>
